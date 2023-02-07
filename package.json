@@ -8,6 +8,7 @@
     "dev": "vite",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
+    "clean": "gh-pages-clean gh-pages -d dist",
     "build": "vite build",
     "preview": "vite preview"
   },
