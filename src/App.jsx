@@ -1,4 +1,4 @@
-import { useState, useEffect, lazy } from "react";
+import React, { useState, useEffect, lazy } from "react";
 //import Chart from "react-apexcharts";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -9,7 +9,7 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import "./App.css";
 
-const Chart = lazy(() => import('react-apexcharts'), 
+const Chart = React.lazy(() => import('react-apexcharts');
 
 function App() {
 
