@@ -9,8 +9,10 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import "./App.css";
 
-function App() {
 const Chart = lazy(() => import('react-apexcharts'), 
+
+function App() {
+
   const [data, setData] = useState([]);
   const getData = () => {
     fetch("./src/sample-data.json", {
