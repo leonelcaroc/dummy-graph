@@ -9,7 +9,7 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import "./App.css";
 
-const Chart = React.lazy(() => import('react-apexcharts');
+const Chart = React.lazy(() => import('react-apexcharts'));
 
 function App() {
 
