@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import Chart from "react-apexcharts";
+import { useState, useEffect, lazy } from "react";
+//import Chart from "react-apexcharts";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -10,6 +10,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import "./App.css";
 
 function App() {
+const Chart = lazy(() => import('react-apexcharts'), 
   const [data, setData] = useState([]);
   const getData = () => {
     fetch("./src/sample-data.json", {
