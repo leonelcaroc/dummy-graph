@@ -32,8 +32,9 @@ function App() {
   const series = [
     {
       data: data.map((item) => {
-        return { x: item.Date, y: item.Revenue.toFixed(2) };
-      }),
+       // return { x: item.Date, y: item.Revenue.toFixed(2) };
+   return {x: "05/09/2022", y: "$600.56" }   
+}),
     },
   ];
 
