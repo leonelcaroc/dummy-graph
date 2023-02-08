@@ -24,8 +24,8 @@ function App() {
       .then(function (res) {
         return res.json();
       })
-      .then((data) => {
-        setData(data);
+      .then((res) => {
+        setData(res);
       });
   };
   useEffect(() => {
