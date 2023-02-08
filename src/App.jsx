@@ -13,30 +13,10 @@ import "./App.css";
 const Chart = React.lazy(() => import("react-apexcharts"));
 
 function App() {
-  // const [data, setData] = useState([]);
-  // const getData = () => {
-  //   fetch("./src/sample-data.json", {
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       Accept: "application/json",
-  //     },
-  //   })
-  //     .then(function (res) {
-  //       return res.json();
-  //     })
-  //     .then((res) => {
-  //       setData(res);
-  //     });
-  // };
-  // useEffect(() => {
-  //   getData();
-  // }, []);
-
   const series = [
     {
       data: data.map((item) => {
         return { x: item.Date, y: item.Revenue.toFixed(2) };
-        // return { x: "05/09/2022", y: "$600.56" };
       }),
     },
   ];
