@@ -7,37 +7,37 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import data from "./sample-data";
 import "./App.css";
 
-const Chart = React.lazy(() => import('react-apexcharts'));
+const Chart = React.lazy(() => import("react-apexcharts"));
 
 function App() {
-
-  const [data, setData] = useState([]);
-  const getData = () => {
-    fetch("./src/sample-data.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then(function (res) {
-        return res.json();
-      })
-      .then((res) => {
-        setData(res);
-      });
-  };
-  useEffect(() => {
-    getData();
-  }, []);
+  // const [data, setData] = useState([]);
+  // const getData = () => {
+  //   fetch("./src/sample-data.json", {
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Accept: "application/json",
+  //     },
+  //   })
+  //     .then(function (res) {
+  //       return res.json();
+  //     })
+  //     .then((res) => {
+  //       setData(res);
+  //     });
+  // };
+  // useEffect(() => {
+  //   getData();
+  // }, []);
 
   const series = [
     {
       data: data.map((item) => {
-       // return { x: item.Date, y: item.Revenue.toFixed(2) };
-   return {x: "05/09/2022", y: "$600.56" }   
-}),
+        return { x: item.Date, y: item.Revenue.toFixed(2) };
+        // return { x: "05/09/2022", y: "$600.56" };
+      }),
     },
   ];
 
@@ -153,20 +153,10 @@ function App() {
         </AppBar>
       </Box>
       <div className="chart1">
-        <Chart
-          options={option1}
-          series={series}
-          width="90%"
-          height="300"
-        />
+        <Chart options={option1} series={series} width="90%" height="300" />
       </div>
       <div className="chart2">
-        <Chart
-          options={option2}
-          series={series}
-          width="90%"
-          height="100"
-        />
+        <Chart options={option2} series={series} width="90%" height="100" />
       </div>
       <div className="text">Created by Leonel M. Caroc</div>
     </div>
