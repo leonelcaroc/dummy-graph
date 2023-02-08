@@ -1,4 +1,4 @@
-export const data = [
+const data = [
   {
     Date: "08/01/2022",
     Revenue: 667.6346217178175,
@@ -736,3 +736,5 @@ export const data = [
     Revenue: 688.4643042166853,
   },
 ];
+
+export default data;
