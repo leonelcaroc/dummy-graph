@@ -1,5 +1,4 @@
 {
-  "homepage": "https://leonelcaroc.github.io/dummy-graph",
   "name": "dummy-graph",
   "private": true,
   "version": "0.0.0",
@@ -8,7 +7,6 @@
     "dev": "vite",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "clean": "gh-pages-clean gh-pages -d dist",
     "build": "vite build",
     "preview": "vite preview"
   },
